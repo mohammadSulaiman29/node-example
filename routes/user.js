@@ -12,7 +12,7 @@ userRouter.get('/' , (req , res) => {
 });
 
 userRouter.get('/:id' , (req , res) => {
-    res.status(200).send(`User by id ${req.params.id}`);
+    res.status(200).send(`User by id ${req.params.id}`); 
     console.log(`users with ID : ${req.params.id}`);
 });
 

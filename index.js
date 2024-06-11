@@ -5,7 +5,7 @@ const app = expree();
 const {userRouter} = require('./routes/user.js');
 
 //Setup static and middleware
-app.use(expree.static('./public'));
+// app.use(expree.static('./public'));
 
 // And we have a third party middleware like morgan (npm)
 
