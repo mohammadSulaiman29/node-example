@@ -4,6 +4,7 @@ const {authorize} = require('../middlewares/authorize');
 
 // Authorize middleware  
 userRouter.use(authorize);
+// userRouter.use([authorize ,  ...]);
 
 userRouter.get('/' , (req , res) => {
     res.status(200).send("Users");
