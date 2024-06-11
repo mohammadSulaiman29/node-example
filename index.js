@@ -4,6 +4,12 @@ const app = expree();
 // user routes
 const {userRouter} = require('./routes/user.js');
 
+//Setup static and middleware
+app.use(expree.static('./public'));
+
+// And we have a third party middleware like morgan (npm)
+
+
 // explain process
 const PORT = process.env.PORT || 8000;
 
