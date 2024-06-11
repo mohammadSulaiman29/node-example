@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "migrate" : "npx sequelize-cli db:migrate",
-    "down" : "npx sequelize-cli db:migrate:undo"
+    "migrate": "npx sequelize-cli db:migrate",
+    "down": "npx sequelize-cli db:migrate:undo"
   },
   "author": "Mohammad",
   "license": "ISC",
