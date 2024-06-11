@@ -1,5 +1,9 @@
 const express = require('express');
 const userRouter = express.Router();
+const {authorize} = require('../middlewares/authorize');
+
+// Authorize middleware  
+userRouter.use(authorize);
 
 userRouter.get('/' , (req , res) => {
     res.status(200).send("Users");
