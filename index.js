@@ -43,6 +43,39 @@ app.post('/login', (req, res) => {
     }
 });
 
+app.post('/api/postman/people' , (req , res) => {
+    const {name} = req.body;
+    if(name){
+        return res.status(200).json({
+            success : true , 
+            msg : "Hello",
+        })
+    }
+    res.status(200).json({
+        success : true,
+        data : [...peoples , name],
+    })
+});
+
+app.put('/edit/user/:id' , (req , res) => {
+    res.status(200).json({
+        status : true,
+        data : {
+            id : req.params.id,
+            name : req.body.name
+        }
+    });
+});
+
+app.delete('/delete/user/:id' , (req , res) => {
+    const {name} = req.body;
+    res.status(200).json({
+        status : true,
+        id : req.params.id,
+        name : name,
+    })
+});
+
 app.use('/users', userRouter);
 app.listen(PORT, () => {
     console.log(`Server starting on port ${PORT}`);
